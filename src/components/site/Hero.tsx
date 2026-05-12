@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Sparkles, ArrowRight, Calendar, Star } from "lucide-react";
-import heroImg from "@/assets/hero-portrait.jpg";
+import heroImg from "@/assets/gallery/g9.png";
 
 export function Hero() {
   return (
