@@ -13,7 +13,8 @@ export function Hero() {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-foreground/55 via-foreground/25 to-ivory" />
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-ivory" />
       </div>
 
       {/* floating petals */}

@@ -47,38 +47,38 @@
 :root {
   --radius: 0.75rem;
 
-  /* Soft pastel palette: blush peach, dusty sky blue, beige, off-white */
-  --background: oklch(0.975 0.006 60);        /* off-white */
-  --foreground: oklch(0.28 0.025 250);        /* deep slate ink */
-  --card: oklch(0.985 0.005 60);
-  --card-foreground: oklch(0.28 0.025 250);
-  --popover: oklch(0.985 0.005 60);
-  --popover-foreground: oklch(0.28 0.025 250);
+  /* Cool blue-gray palette: #75909C #9FB5C4 #C9D5DB #DEE6E9 #E6E6E6 */
+  --background: #E6E6E6;                       /* off-white gray */
+  --foreground: oklch(0.28 0.02 235);          /* deep blue-slate ink */
+  --card: #DEE6E9;
+  --card-foreground: oklch(0.28 0.02 235);
+  --popover: #ffffff;
+  --popover-foreground: oklch(0.28 0.02 235);
 
-  --primary: oklch(0.42 0.04 250);            /* deep slate */
-  --primary-foreground: oklch(0.98 0.005 60);
-  --secondary: oklch(0.92 0.022 60);          /* warm beige */
-  --secondary-foreground: oklch(0.3 0.025 250);
-  --muted: oklch(0.94 0.012 240);
-  --muted-foreground: oklch(0.48 0.02 250);
-  --accent: oklch(0.86 0.05 40);              /* blush peach */
-  --accent-foreground: oklch(0.28 0.025 250);
+  --primary: #75909C;                          /* steel blue */
+  --primary-foreground: #ffffff;
+  --secondary: #C9D5DB;                        /* light blue-gray */
+  --secondary-foreground: oklch(0.3 0.02 235);
+  --muted: #DEE6E9;
+  --muted-foreground: oklch(0.45 0.02 235);
+  --accent: #9FB5C4;                           /* dusty blue */
+  --accent-foreground: oklch(0.22 0.02 235);
   --destructive: oklch(0.55 0.2 27);
-  --destructive-foreground: oklch(0.98 0.005 60);
+  --destructive-foreground: #ffffff;
 
-  --border: oklch(0.88 0.018 60);
-  --input: oklch(0.9 0.018 60);
-  --ring: oklch(0.78 0.06 40);
+  --border: #C9D5DB;
+  --input: #DEE6E9;
+  --ring: #75909C;
 
-  /* Named tokens kept for backward compat — now mapped to new palette */
-  --gold: oklch(0.78 0.07 40);                /* now: blush peach (accent role) */
-  --gold-soft: oklch(0.88 0.04 40);
-  --champagne: oklch(0.92 0.022 60);          /* warm beige */
-  --ivory: oklch(0.975 0.006 60);
-  --blush: oklch(0.86 0.05 40);
-  --sky: oklch(0.88 0.035 240);               /* dusty sky blue */
-  --mist: oklch(0.93 0.018 240);              /* pale icy */
-  --sand: oklch(0.89 0.025 60);               /* warm beige */
+  /* Legacy tokens remapped to new palette */
+  --gold: #75909C;
+  --gold-soft: #9FB5C4;
+  --champagne: #C9D5DB;
+  --ivory: #E6E6E6;
+  --blush: #9FB5C4;
+  --sky: #9FB5C4;
+  --mist: #DEE6E9;
+  --sand: #C9D5DB;
 
   /* Solid (non-gradient) accent treatments */
   --gradient-gold: var(--accent);             /* legacy var → solid blush */
