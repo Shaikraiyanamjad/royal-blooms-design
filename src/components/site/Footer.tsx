@@ -55,9 +55,9 @@ export function Footer() {
           <div>
             <h4 className="font-display text-lg">Contact</h4>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2"><Phone size={14} className="text-gold" /> 630-205-4201</li>
-              <li className="flex items-center gap-2"><Phone size={14} className="text-gold" /> 630-689-3610</li>
-              <li className="flex items-center gap-2"><Mail size={14} className="text-gold" /> mumtazcompany@yahoo.com</li>
+              <li className="flex items-center gap-2"><Phone size={14} className="text-gold" /><span>630-205-4201</span></li>
+              <li className="flex items-center gap-2"><Phone size={14} className="text-gold" /><span>630-689-3610</span></li>
+              <li className="flex items-center gap-2"><Mail size={14} className="text-gold" /><span>mumtazcompany@yahoo.com</span></li>
               <li className="pt-2">2301 West Devon Avenue<br />Chicago, IL 60659</li>
             </ul>
           </div>

@@ -13,7 +13,7 @@ export function Hero() {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-ivory/40 via-ivory/60 to-ivory" />
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/55 via-foreground/25 to-ivory" />
       </div>
 
       {/* floating petals */}
@@ -49,10 +49,10 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.15 }}
-          className="mt-6 font-display text-5xl leading-[1.05] sm:text-6xl md:text-7xl lg:text-8xl"
+          className="mt-6 font-display text-5xl leading-[1.05] sm:text-6xl md:text-7xl lg:text-8xl text-ivory drop-shadow-[0_2px_24px_rgba(0,0,0,0.45)]"
         >
           Creating Memorable
-          <span className="block text-gradient-gold italic">Celebrations</span>
+          <span className="block italic" style={{ color: "var(--blush)" }}>Celebrations</span>
           <span className="block">With Tradition & Elegance</span>
         </motion.h1>
 
@@ -60,7 +60,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.35 }}
-          className="mt-6 max-w-2xl text-base md:text-lg text-muted-foreground"
+          className="mt-6 max-w-2xl text-base md:text-lg text-ivory/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]"
         >
           Specialists in complete marriage and party decorations with over 200 years of cultural heritage.
         </motion.p>
