@@ -114,8 +114,8 @@ export function About() {
         <div className="mt-24">
           <div className="gold-divider mx-auto w-40" />
           <h3 className="mt-10 text-center font-display text-3xl md:text-4xl">A Lineage of Craft</h3>
-          <div className="relative mt-12 grid gap-8 md:grid-cols-4">
-            <div className="absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-gold to-transparent md:block" />
+          <div className="relative mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-gold to-transparent lg:block" />
             {milestones.map((m, i) => (
               <motion.div
                 key={m.year}
