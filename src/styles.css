@@ -71,14 +71,15 @@
   --ring: #75909C;
 
   /* Legacy tokens remapped to new palette */
-  --gold: #75909C;
-  --gold-soft: #9FB5C4;
+  --gold: #4F6B78;
+  --gold-soft: #75909C;
   --champagne: #C9D5DB;
   --ivory: #E6E6E6;
-  --blush: #9FB5C4;
+  --blush: #75909C;
   --sky: #9FB5C4;
   --mist: #DEE6E9;
   --sand: #C9D5DB;
+  --steel-deep: #3A525C;
 
   /* Solid (non-gradient) accent treatments */
   --gradient-gold: var(--accent);             /* legacy var → solid blush */
