@@ -158,7 +158,7 @@ export function Gallery() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[80] grid place-items-center p-4 backdrop-blur-md"
+            className="fixed inset-0 z-[80] grid place-items-center p-4"
             style={{ background: "color-mix(in oklab, var(--primary) 80%, transparent)" }}
             onClick={close}
           >
