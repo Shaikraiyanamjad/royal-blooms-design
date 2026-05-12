@@ -66,7 +66,7 @@ export function Navbar() {
         <button
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
-          className={`lg:hidden grid h-10 w-10 place-items-center rounded-full ${scrolled ? "glass" : "bg-ivory/20 text-ivory backdrop-blur"}`}
+          className={`lg:hidden grid h-10 w-10 place-items-center rounded-full ${scrolled ? "glass" : "bg-ivory/20 text-ivory"}`}
         >
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
