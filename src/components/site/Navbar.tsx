@@ -28,7 +28,7 @@ export function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-ivory/85 backdrop-blur-xl shadow-soft" : "bg-black/25 backdrop-blur-sm"
+        scrolled ? "bg-ivory shadow-soft" : "bg-black/40"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
@@ -66,7 +66,7 @@ export function Navbar() {
         <button
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
-          className={`lg:hidden grid h-10 w-10 place-items-center rounded-full ${scrolled ? "glass" : "bg-ivory/20 text-ivory backdrop-blur"}`}
+          className={`lg:hidden grid h-10 w-10 place-items-center rounded-full ${scrolled ? "glass" : "bg-ivory/20 text-ivory"}`}
         >
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>

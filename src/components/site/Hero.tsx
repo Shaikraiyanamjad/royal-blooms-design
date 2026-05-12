@@ -4,17 +4,16 @@ import heroImg from "@/assets/hero.jpg";
 
 export function Hero() {
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden pt-24">
+    <section id="home" className="relative overflow-hidden pt-20">
       <div className="absolute inset-0 -z-10">
         <img
           src={heroImg}
           alt="Luxury wedding decoration with floral arch and chandelier"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-center"
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-ivory" />
+        <div className="absolute inset-0 bg-black/35" />
       </div>
 
       {/* floating petals */}
@@ -36,7 +35,7 @@ export function Hero() {
         />
       ))}
 
-      <div className="relative mx-auto flex min-h-[calc(100vh-6rem)] max-w-6xl flex-col items-center justify-center px-6 py-16 text-center">
+      <div className="relative mx-auto flex aspect-[16/10] min-h-[560px] w-full max-w-6xl flex-col items-center justify-center px-6 py-16 text-center sm:aspect-[16/9]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -80,7 +79,7 @@ export function Hero() {
           </a>
           <a
             href="#services"
-            className="group inline-flex items-center gap-2 rounded-full border border-gold/40 bg-ivory/70 px-7 py-3.5 text-sm font-medium text-foreground backdrop-blur transition-all hover:bg-ivory"
+            className="group inline-flex items-center gap-2 rounded-full border border-gold/40 bg-ivory/80 px-7 py-3.5 text-sm font-medium text-foreground transition-all hover:bg-ivory"
           >
             Explore Services
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />

@@ -99,11 +99,11 @@ export function About() {
                 { v: 1500, s: "+", l: "Events Designed" },
                 { v: 100, s: "%", l: "Handcrafted" },
               ].map((m) => (
-                <div key={m.l} className="rounded-2xl glass p-5 text-center">
-                  <div className="font-display text-3xl md:text-4xl text-gradient-gold">
+                <div key={m.l} className="rounded-2xl glass p-3 sm:p-5 text-center">
+                  <div className="font-display text-2xl sm:text-3xl md:text-4xl text-gradient-gold">
                     <Counter to={m.v} suffix={m.s} />
                   </div>
-                  <div className="mt-1 text-[11px] uppercase tracking-widest text-muted-foreground">{m.l}</div>
+                  <div className="mt-1 text-[9px] sm:text-[11px] uppercase tracking-wider sm:tracking-widest text-muted-foreground break-words">{m.l}</div>
                 </div>
               ))}
             </div>
@@ -114,8 +114,8 @@ export function About() {
         <div className="mt-24">
           <div className="gold-divider mx-auto w-40" />
           <h3 className="mt-10 text-center font-display text-3xl md:text-4xl">A Lineage of Craft</h3>
-          <div className="relative mt-12 grid gap-8 md:grid-cols-4">
-            <div className="absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-gold to-transparent md:block" />
+          <div className="relative mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-gold to-transparent lg:block" />
             {milestones.map((m, i) => (
               <motion.div
                 key={m.year}

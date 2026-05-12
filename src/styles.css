@@ -55,7 +55,7 @@
   --popover: #ffffff;
   --popover-foreground: oklch(0.28 0.02 235);
 
-  --primary: #75909C;                          /* steel blue */
+  --primary: #4F6B78;                          /* darker steel blue */
   --primary-foreground: #ffffff;
   --secondary: #C9D5DB;                        /* light blue-gray */
   --secondary-foreground: oklch(0.3 0.02 235);
@@ -71,14 +71,15 @@
   --ring: #75909C;
 
   /* Legacy tokens remapped to new palette */
-  --gold: #75909C;
-  --gold-soft: #9FB5C4;
+  --gold: #4F6B78;
+  --gold-soft: #75909C;
   --champagne: #C9D5DB;
   --ivory: #E6E6E6;
-  --blush: #9FB5C4;
+  --blush: #75909C;
   --sky: #9FB5C4;
   --mist: #DEE6E9;
   --sand: #C9D5DB;
+  --steel-deep: #3A525C;
 
   /* Solid (non-gradient) accent treatments */
   --gradient-gold: var(--accent);             /* legacy var → solid blush */
@@ -115,9 +116,7 @@
   .shadow-luxe { box-shadow: var(--shadow-luxe); }
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .glass {
-    background: color-mix(in oklab, var(--ivory) 70%, transparent);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    background: color-mix(in oklab, var(--ivory) 92%, transparent);
     border: 1px solid color-mix(in oklab, var(--gold) 18%, transparent);
   }
   .gold-divider {
