@@ -39,45 +39,53 @@
   --color-champagne: var(--champagne);
   --color-ivory: var(--ivory);
   --color-blush: var(--blush);
+  --color-sky: var(--sky);
+  --color-mist: var(--mist);
+  --color-sand: var(--sand);
 }
 
 :root {
   --radius: 0.75rem;
 
-  /* Luxury wedding palette */
-  --background: oklch(0.985 0.012 85);        /* ivory */
-  --foreground: oklch(0.24 0.03 60);          /* deep espresso */
-  --card: oklch(0.995 0.006 85);
-  --card-foreground: oklch(0.24 0.03 60);
-  --popover: oklch(0.995 0.006 85);
-  --popover-foreground: oklch(0.24 0.03 60);
+  /* Soft pastel palette: blush peach, dusty sky blue, beige, off-white */
+  --background: oklch(0.975 0.006 60);        /* off-white */
+  --foreground: oklch(0.28 0.025 250);        /* deep slate ink */
+  --card: oklch(0.985 0.005 60);
+  --card-foreground: oklch(0.28 0.025 250);
+  --popover: oklch(0.985 0.005 60);
+  --popover-foreground: oklch(0.28 0.025 250);
 
-  --primary: oklch(0.62 0.11 78);             /* antique gold */
-  --primary-foreground: oklch(0.99 0.005 85);
-  --secondary: oklch(0.94 0.022 80);          /* champagne */
-  --secondary-foreground: oklch(0.28 0.04 60);
-  --muted: oklch(0.95 0.012 85);
-  --muted-foreground: oklch(0.46 0.03 60);
-  --accent: oklch(0.88 0.05 50);              /* blush */
-  --accent-foreground: oklch(0.24 0.03 60);
+  --primary: oklch(0.42 0.04 250);            /* deep slate */
+  --primary-foreground: oklch(0.98 0.005 60);
+  --secondary: oklch(0.92 0.022 60);          /* warm beige */
+  --secondary-foreground: oklch(0.3 0.025 250);
+  --muted: oklch(0.94 0.012 240);
+  --muted-foreground: oklch(0.48 0.02 250);
+  --accent: oklch(0.86 0.05 40);              /* blush peach */
+  --accent-foreground: oklch(0.28 0.025 250);
   --destructive: oklch(0.55 0.2 27);
-  --destructive-foreground: oklch(0.99 0.005 85);
+  --destructive-foreground: oklch(0.98 0.005 60);
 
-  --border: oklch(0.88 0.025 80);
-  --input: oklch(0.9 0.02 80);
-  --ring: oklch(0.62 0.11 78);
+  --border: oklch(0.88 0.018 60);
+  --input: oklch(0.9 0.018 60);
+  --ring: oklch(0.78 0.06 40);
 
-  --gold: oklch(0.72 0.13 82);
-  --gold-soft: oklch(0.85 0.08 82);
-  --champagne: oklch(0.93 0.03 80);
-  --ivory: oklch(0.985 0.012 85);
-  --blush: oklch(0.9 0.04 30);
+  /* Named tokens kept for backward compat — now mapped to new palette */
+  --gold: oklch(0.78 0.07 40);                /* now: blush peach (accent role) */
+  --gold-soft: oklch(0.88 0.04 40);
+  --champagne: oklch(0.92 0.022 60);          /* warm beige */
+  --ivory: oklch(0.975 0.006 60);
+  --blush: oklch(0.86 0.05 40);
+  --sky: oklch(0.88 0.035 240);               /* dusty sky blue */
+  --mist: oklch(0.93 0.018 240);              /* pale icy */
+  --sand: oklch(0.89 0.025 60);               /* warm beige */
 
-  --gradient-gold: linear-gradient(135deg, oklch(0.78 0.13 82), oklch(0.62 0.11 78));
-  --gradient-soft: linear-gradient(180deg, oklch(0.985 0.012 85), oklch(0.94 0.03 70));
-  --gradient-hero: linear-gradient(180deg, color-mix(in oklab, var(--ivory) 30%, transparent), color-mix(in oklab, var(--ivory) 95%, transparent));
-  --shadow-luxe: 0 30px 80px -30px color-mix(in oklab, var(--gold) 35%, transparent);
-  --shadow-soft: 0 10px 40px -15px color-mix(in oklab, var(--foreground) 18%, transparent);
+  /* Solid (non-gradient) accent treatments */
+  --gradient-gold: var(--accent);             /* legacy var → solid blush */
+  --gradient-soft: var(--ivory);
+  --gradient-hero: linear-gradient(180deg, transparent, color-mix(in oklab, var(--ivory) 55%, transparent));
+  --shadow-luxe: 0 24px 60px -28px color-mix(in oklab, var(--primary) 35%, transparent);
+  --shadow-soft: 0 10px 40px -15px color-mix(in oklab, var(--foreground) 14%, transparent);
 }
 
 @layer base {
@@ -89,23 +97,21 @@
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     background-image:
-      radial-gradient(at 10% 0%, color-mix(in oklab, var(--blush) 25%, transparent) 0, transparent 40%),
-      radial-gradient(at 90% 100%, color-mix(in oklab, var(--gold-soft) 25%, transparent) 0, transparent 40%);
+      radial-gradient(at 8% 0%, color-mix(in oklab, var(--blush) 28%, transparent) 0, transparent 42%),
+      radial-gradient(at 92% 100%, color-mix(in oklab, var(--sky) 28%, transparent) 0, transparent 42%);
     background-attachment: fixed;
   }
   h1, h2, h3, h4, .font-display { font-family: var(--font-display); letter-spacing: -0.01em; }
 }
 
 @layer utilities {
-  .text-gold { color: var(--gold); }
-  .bg-gold { background-color: var(--gold); }
-  .bg-gradient-gold { background-image: var(--gradient-gold); }
-  .text-gradient-gold {
-    background-image: var(--gradient-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
+  .text-gold { color: var(--primary); }
+  .bg-gold { background-color: var(--accent); }
+  .bg-gradient-gold { background-color: var(--accent); background-image: none; }
+  .text-gradient-gold { color: var(--primary); font-style: italic; }
+  .bg-sky { background-color: var(--sky); }
+  .bg-mist { background-color: var(--mist); }
+  .bg-sand { background-color: var(--sand); }
   .shadow-luxe { box-shadow: var(--shadow-luxe); }
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .glass {
