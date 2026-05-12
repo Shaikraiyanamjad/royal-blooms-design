@@ -55,7 +55,7 @@
   --popover: #ffffff;
   --popover-foreground: oklch(0.28 0.02 235);
 
-  --primary: #75909C;                          /* steel blue */
+  --primary: #4F6B78;                          /* darker steel blue */
   --primary-foreground: #ffffff;
   --secondary: #C9D5DB;                        /* light blue-gray */
   --secondary-foreground: oklch(0.3 0.02 235);
