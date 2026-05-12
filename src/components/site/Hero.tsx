@@ -79,7 +79,7 @@ export function Hero() {
           </a>
           <a
             href="#services"
-            className="group inline-flex items-center gap-2 rounded-full border border-gold/40 bg-ivory/70 px-7 py-3.5 text-sm font-medium text-foreground backdrop-blur transition-all hover:bg-ivory"
+            className="group inline-flex items-center gap-2 rounded-full border border-gold/40 bg-ivory/80 px-7 py-3.5 text-sm font-medium text-foreground transition-all hover:bg-ivory"
           >
             Explore Services
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
