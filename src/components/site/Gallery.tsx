@@ -139,11 +139,10 @@ export function Gallery() {
                   <span aria-hidden className="absolute -right-6 -top-6 h-16 w-16 rotate-45"
                     style={{ background: "color-mix(in oklab, var(--sky) 70%, white)" }}
                   />
-                </motion.button>
+                </button>
               );
             })}
-          </AnimatePresence>
-        </motion.div>
+        </div>
 
         <div className="mt-10 flex items-center justify-center gap-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
           <span className="h-px w-10 bg-border" />
