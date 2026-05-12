@@ -35,7 +35,7 @@ export function Hero() {
         />
       ))}
 
-      <div className="relative mx-auto flex min-h-[calc(100vh-6rem)] max-w-6xl flex-col items-center justify-center px-6 py-16 text-center">
+      <div className="relative mx-auto flex aspect-[16/10] min-h-[560px] w-full max-w-6xl flex-col items-center justify-center px-6 py-16 text-center sm:aspect-[16/9]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
