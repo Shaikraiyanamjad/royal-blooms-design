@@ -79,26 +79,14 @@ export function Gallery() {
           })}
         </div>
 
-        {/* Bento grid */}
-        <motion.div
-          layout
-          className="mt-12 grid auto-rows-[150px] sm:auto-rows-[140px] lg:auto-rows-[130px] grid-cols-1 sm:grid-cols-6 lg:grid-cols-12 gap-3 sm:gap-4"
-        >
-          <AnimatePresence mode="popLayout">
-            {filtered.map((it, idx) => {
-              const span = spans[idx % spans.length];
-              const h = heights[idx % heights.length];
+        {/* Uniform responsive grid */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+          {filtered.map((it, idx) => {
               return (
-                <motion.button
+                <button
                   key={it.src}
-                  layout
-                  initial={{ opacity: 0, y: 20, scale: 0.96 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                  whileHover={{ y: -4 }}
                   onClick={() => setOpen(idx)}
-                  className={`group relative col-span-1 ${span} ${h} overflow-hidden rounded-[28px] focus:outline-none focus:ring-2 focus:ring-ring`}
+                  className="group relative h-[320px] sm:h-[340px] lg:h-[380px] overflow-hidden rounded-[28px] focus:outline-none focus:ring-2 focus:ring-ring"
                   style={{
                     boxShadow: "0 18px 50px -25px color-mix(in oklab, var(--primary) 35%, transparent)",
                   }}
