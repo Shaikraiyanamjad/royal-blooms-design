@@ -28,30 +28,7 @@ const items: Item[] = [
 
 const categories = ["All", "Stage", "Floral", "Reception", "Mehndi", "Nikah"];
 
-// Asymmetric bento spans (mobile = 1 col, tablet = 6 cols, desktop = 12 cols)
-const spans = [
-  "sm:col-span-4 lg:col-span-7 row-span-2",
-  "sm:col-span-2 lg:col-span-5",
-  "sm:col-span-3 lg:col-span-5",
-  "sm:col-span-3 lg:col-span-4",
-  "sm:col-span-2 lg:col-span-4 row-span-2",
-  "sm:col-span-4 lg:col-span-4",
-  "sm:col-span-3 lg:col-span-5",
-  "sm:col-span-3 lg:col-span-4",
-  "sm:col-span-6 lg:col-span-3",
-];
-
-const heights = [
-  "h-[420px] sm:h-[460px] lg:h-[560px]",
-  "h-[220px] sm:h-[220px] lg:h-[270px]",
-  "h-[300px]",
-  "h-[300px]",
-  "h-[300px] lg:h-[620px]",
-  "h-[300px]",
-  "h-[300px]",
-  "h-[300px]",
-  "h-[300px]",
-];
+// Consistent uniform grid (mobile 1 col, tablet 2, desktop 3)
 
 export function Gallery() {
   const [filter, setFilter] = useState("All");
