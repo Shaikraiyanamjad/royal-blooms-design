@@ -4,17 +4,16 @@ import heroImg from "@/assets/hero.jpg";
 
 export function Hero() {
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden pt-24">
+    <section id="home" className="relative overflow-hidden pt-20">
       <div className="absolute inset-0 -z-10">
         <img
           src={heroImg}
           alt="Luxury wedding decoration with floral arch and chandelier"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-center"
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-ivory" />
+        <div className="absolute inset-0 bg-black/35" />
       </div>
 
       {/* floating petals */}
