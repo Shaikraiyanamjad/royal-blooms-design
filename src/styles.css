@@ -42,51 +42,60 @@
   --color-sky: var(--sky);
   --color-mist: var(--mist);
   --color-sand: var(--sand);
+  --color-navy: var(--navy);
+  --color-teal: var(--teal);
+  --color-beige: var(--beige);
 }
 
 :root {
   --radius: 0.75rem;
 
-  /* Cool blue-gray palette: #75909C #9FB5C4 #C9D5DB #DEE6E9 #E6E6E6 */
-  --background: #E6E6E6;                       /* off-white gray */
-  --foreground: oklch(0.28 0.02 235);          /* deep blue-slate ink */
-  --card: #DEE6E9;
-  --card-foreground: oklch(0.28 0.02 235);
-  --popover: #ffffff;
-  --popover-foreground: oklch(0.28 0.02 235);
+  /* Heritage palette: navy / beige / teal */
+  --navy: #0F2A3F;
+  --navy-deep: #081A28;
+  --teal: #2A6F6B;
+  --teal-soft: #3F8E89;
+  --beige: #F2E8D3;
+  --beige-soft: #FAF3E2;
+  --sand-warm: #E4D5B5;
 
-  --primary: #4F6B78;                          /* darker steel blue */
-  --primary-foreground: #ffffff;
-  --secondary: #C9D5DB;                        /* light blue-gray */
-  --secondary-foreground: oklch(0.3 0.02 235);
-  --muted: #DEE6E9;
-  --muted-foreground: oklch(0.45 0.02 235);
-  --accent: #9FB5C4;                           /* dusty blue */
-  --accent-foreground: oklch(0.22 0.02 235);
+  --background: #FAF3E2;
+  --foreground: #0F2A3F;
+  --card: #FFFFFF;
+  --card-foreground: #0F2A3F;
+  --popover: #FFFFFF;
+  --popover-foreground: #0F2A3F;
+
+  --primary: #0F2A3F;
+  --primary-foreground: #FAF3E2;
+  --secondary: #F2E8D3;
+  --secondary-foreground: #0F2A3F;
+  --muted: #EFE5CE;
+  --muted-foreground: #4A5C6A;
+  --accent: #2A6F6B;
+  --accent-foreground: #FAF3E2;
   --destructive: oklch(0.55 0.2 27);
   --destructive-foreground: #ffffff;
 
-  --border: #C9D5DB;
-  --input: #DEE6E9;
-  --ring: #75909C;
+  --border: #E4D5B5;
+  --input: #EFE5CE;
+  --ring: #2A6F6B;
 
-  /* Legacy tokens remapped to new palette */
-  --gold: #4F6B78;
-  --gold-soft: #75909C;
-  --champagne: #C9D5DB;
-  --ivory: #E6E6E6;
-  --blush: #75909C;
-  --sky: #9FB5C4;
-  --mist: #DEE6E9;
-  --sand: #C9D5DB;
-  --steel-deep: #3A525C;
+  /* Legacy tokens remapped */
+  --gold: #2A6F6B;
+  --gold-soft: #3F8E89;
+  --champagne: #E4D5B5;
+  --ivory: #FAF3E2;
+  --blush: #2A6F6B;
+  --sky: #3F8E89;
+  --mist: #F2E8D3;
+  --sand: #E4D5B5;
+  --steel-deep: #081A28;
 
-  /* Solid (non-gradient) accent treatments */
-  --gradient-gold: var(--accent);             /* legacy var → solid blush */
+  --gradient-gold: var(--accent);
   --gradient-soft: var(--ivory);
-  --gradient-hero: linear-gradient(180deg, transparent, color-mix(in oklab, var(--ivory) 55%, transparent));
-  --shadow-luxe: 0 24px 60px -28px color-mix(in oklab, var(--primary) 35%, transparent);
-  --shadow-soft: 0 10px 40px -15px color-mix(in oklab, var(--foreground) 14%, transparent);
+  --shadow-luxe: 0 24px 60px -28px color-mix(in oklab, var(--navy) 45%, transparent);
+  --shadow-soft: 0 10px 40px -15px color-mix(in oklab, var(--navy) 18%, transparent);
 }
 
 @layer base {
@@ -98,35 +107,45 @@
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     background-image:
-      radial-gradient(at 8% 0%, color-mix(in oklab, var(--blush) 28%, transparent) 0, transparent 42%),
-      radial-gradient(at 92% 100%, color-mix(in oklab, var(--sky) 28%, transparent) 0, transparent 42%);
+      radial-gradient(at 8% 0%, color-mix(in oklab, var(--teal) 14%, transparent) 0, transparent 45%),
+      radial-gradient(at 92% 100%, color-mix(in oklab, var(--navy) 10%, transparent) 0, transparent 45%);
     background-attachment: fixed;
   }
   h1, h2, h3, h4, .font-display { font-family: var(--font-display); letter-spacing: -0.01em; }
 }
 
 @layer utilities {
-  .text-gold { color: var(--primary); }
+  .text-gold { color: var(--accent); }
   .bg-gold { background-color: var(--accent); }
   .bg-gradient-gold { background-color: var(--accent); background-image: none; }
-  .text-gradient-gold { color: var(--primary); font-style: italic; }
+  .text-gradient-gold { color: var(--accent); font-style: italic; }
+  .bg-navy { background-color: var(--navy); }
+  .bg-teal { background-color: var(--teal); }
+  .bg-beige { background-color: var(--beige); }
   .bg-sky { background-color: var(--sky); }
   .bg-mist { background-color: var(--mist); }
   .bg-sand { background-color: var(--sand); }
+  .text-navy { color: var(--navy); }
+  .text-teal { color: var(--teal); }
   .shadow-luxe { box-shadow: var(--shadow-luxe); }
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .glass {
     background: color-mix(in oklab, var(--ivory) 92%, transparent);
-    border: 1px solid color-mix(in oklab, var(--gold) 18%, transparent);
+    border: 1px solid color-mix(in oklab, var(--navy) 12%, transparent);
   }
   .gold-divider {
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
   }
   .ornate-border {
-    border: 1px solid color-mix(in oklab, var(--gold) 35%, transparent);
+    border: 1px solid color-mix(in oklab, var(--accent) 35%, transparent);
     box-shadow: inset 0 0 0 4px color-mix(in oklab, var(--ivory) 100%, transparent),
-                inset 0 0 0 5px color-mix(in oklab, var(--gold) 25%, transparent);
+                inset 0 0 0 5px color-mix(in oklab, var(--accent) 25%, transparent);
+  }
+  .paper-texture {
+    background-image:
+      radial-gradient(color-mix(in oklab, var(--navy) 6%, transparent) 1px, transparent 1px);
+    background-size: 18px 18px;
   }
 }
 
@@ -141,7 +160,7 @@
   100% { background-position: 200% 0; }
 }
 .animate-shimmer {
-  background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--gold) 35%, transparent), transparent);
+  background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--accent) 35%, transparent), transparent);
   background-size: 200% 100%;
   animation: shimmer 3s linear infinite;
 }
